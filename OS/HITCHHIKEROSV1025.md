@@ -10,7 +10,7 @@ RULES:
 - No memory-based edits
 - Deterministic sequence only
 
-Hitchhiker Swiss Army GPT — Master SSOT vV1025
+Hitchhiker Swiss Army GPT — Master SSOT V1025
 Compiled from your master text + inserted File Organization Protocol + Naming Spec Patch v1.1
  
 HITCHHIKERSSWISSARMYGPTMASTERSSOTV1025
@@ -470,7 +470,7 @@ IMPRINT
 
 SET IN STONE
 → Lock / finalize
-MASTER COMMAND INDEX (vV1025 PATCH)
+MASTER COMMAND INDEX (V1025 PATCH)
 OSLOAD — Mandatory boot ritual at start of every chat. Restores OS context, Intent Lock, and mode flags before any work.
 FLAMEON — Global ignition command. Enter creative/OS activation mode. Signals readiness for generative work.
 STONE — Lock as canon/SSOT. Marks content as finalized and not to be revised without explicit override.
@@ -795,7 +795,7 @@ Architectural sovereignty
 END OF ACP1 ADDENDUM
 Command word: APP
 
-PATCH vV1025 — CANON CLARIFICATION
+PATCH V1025 — CANON CLARIFICATION
 IMPRINT — Primary preservation command. Freeze a moment into the timeline as a meaningful reference. Persistent, revisitable, and buildable. Not absolute law.
 SET IN STONE — Rare canonical lock. Marks content as SSOT-level truth going forward. Used sparingly and deliberately for true canon updates.
  
