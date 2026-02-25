@@ -1,6 +1,6 @@
-# BOOKEXTRACTORMACHINE_SSOT_V006_UNABRIDGED_MASTER
+# BOOKEXTRACTORMACHINE_SSOT_V007_UNABRIDGED_MASTER
 
-Version: V006\
+Version: V007\
 Status: UNABRIDGED MASTER ARCHITECTURE\
 Date: 2026-02-25\
 Author: Alexander Pisko
@@ -17,6 +17,15 @@ Nothing is compressed for elegance.
 
 This is the long-form doctrinal backbone from which lean operational
 versions may later be derived.
+
+
+------------------------------------------------------------------------
+
+# CHANGES (V007)
+
+- Updated execution-layer reference to: BOOKEXTRACTORMACHINE_PROTOCOLS_V003_DETERMINISTIC_FULL_COMPREHENSIVE.md
+- No doctrinal changes.
+
 
 ------------------------------------------------------------------------
 
@@ -274,10 +283,9 @@ This SSOT defines **doctrine** (what the machine *is*).
 
 The deterministic execution protocol (how the machine is *run*) is defined in:
 
-- BOOKEXTRACTORMACHINE_PROTOCOLS_V001_DETERMINISTIC_FULL_COMPREHENSIVE.md
+- BOOKEXTRACTORMACHINE_PROTOCOLS_V003_DETERMINISTIC_FULL_COMPREHENSIVE.md
 
 Rules:
 - Doctrine (this file) and Protocol (the protocol file) are separate layers.
 - Do not paste/merge protocol text into this SSOT.
 - Execution must follow the protocol file; any deviation must be logged in the COHERENCE REPORT / ERROR LEDGER.
-
