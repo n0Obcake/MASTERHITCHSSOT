@@ -1,458 +1,283 @@
-BOOKEXTRACTORMACHINESSOTV002.md
+# BOOKEXTRACTORMACHINE_SSOT_V006_UNABRIDGED_MASTER
 
-Version: BOOKEXTRACTORMACHINESSOTV002
-Generated: 2026-02-24
+Version: V006\
+Status: UNABRIDGED MASTER ARCHITECTURE\
+Date: 2026-02-25\
+Author: Alexander Pisko
 
-I. DECLARED PURPOSE
+------------------------------------------------------------------------
 
-This document defines the complete operational architecture of the Book Extraction Machine (BEM).
+# DECLARATION
 
-The Book Extraction Machine is a layered synthesis protocol designed to convert unstructured textual material into formal, transferable structural knowledge.
+This document is the **fully expanded, unabridged articulation** of the
+Book Extraction Machine architecture.
 
-This is not summarization.
+Nothing is density-capped here. Nothing is summarized for brevity.
+Nothing is compressed for elegance.
 
-This is structural extraction.
+This is the long-form doctrinal backbone from which lean operational
+versions may later be derived.
 
-The objective is:
+------------------------------------------------------------------------
 
-Preserve original signal.
+# I. FOUNDATIONAL INTENT
 
-Remove narrative noise.
+The Book Extraction Machine exists to:
 
-Isolate irreducible structural units.
+1.  Convert dense written knowledge into structurally encoded
+    mechanisms.
+2.  Preserve nuance without narrative bloat.
+3.  Prevent hallucinated abstraction.
+4.  Enforce epistemic discipline.
+5.  Build a transferable primitive library for future modeling across
+    domains.
+6.  Serve as a long-horizon knowledge extractor for unknown future
+    domains.
 
-Encode them uniformly.
+This is not a summarizer. This is not a note-taking system. This is not
+a highlights engine.
 
-Enable cross-domain transfer.
+It is a structural excavation apparatus.
 
-Preserve falsifiability.
+------------------------------------------------------------------------
 
-The canonical irreducible extraction unit is:
+# II. CORE PHILOSOPHY
 
-Primitive
+A book is: - A compressed topology of interacting forces. - A
+distribution of claims across time. - A mechanism stack hidden beneath
+rhetoric. - A density field of incentives, thresholds, gradients,
+feedback loops, and constraints.
 
-This term is locked and non-negotiable.
+Extraction means: - Decompressing topology. - Separating signal from
+rhetorical ornament. - Identifying irreducible causal skeletons. -
+Encoding those skeletons in transferable form.
 
-II. CORE PHILOSOPHY
+------------------------------------------------------------------------
 
-No compression without structural mapping.
+# III. ONTOLOGICAL STACK
 
-No abstraction without anchor.
+## SIGNAL (Atomic Capture Layer)
 
-No model without break condition.
+Signal is the smallest extractable meaningful unit from source.
 
-No interpretation without perceptual separation.
+Signal fields:
 
-No synthesis without transfer mapping.
+-   SIGNAL_ID
+-   VERBATIM_TEXT (exact quoted text only when truly verbatim)
+-   SOURCE_REFERENCE (page/section/anchor)
+-   MINIMAL_PARAPHRASE
+-   CONTEXT_TAG
+-   CLAIM_TYPE (descriptive, prescriptive, probabilistic, structural)
+-   CONFIDENCE_LEVEL
 
-Extraction is not interpretation.
+Signals are high volume. Signals are not canon. Signals are staging
+inputs.
 
-Extraction precedes synthesis.
+------------------------------------------------------------------------
 
-III. LAYERED SYNTHESIS PIPELINE
+## KERNEL (Mechanism Candidate Layer)
 
-The extraction pipeline is strictly layered.
+Kernel is a clustered group of signals forming a provisional mechanism
+hypothesis.
 
-No layer may be skipped.
+Kernel fields:
 
-No layer may be merged informally.
+-   KERNEL_ID
+-   MECHANISM_NAME
+-   CORE_CAUSAL_STATEMENT
+-   SUPPORTING_SIGNALS (3--7 SIGNAL_IDs)
+-   INITIAL_VARIABLE_SET
+-   PRELIMINARY_BOUNDARY
+-   PRELIMINARY_BREAK_CONDITION
+-   DOMAIN_CONTEXT
 
-Pipeline:
+Kernel is a compression zone. Kernel is not yet irreducible.
 
-Signal → Kernel → Primitive → Structure Map → Transfer Map
+------------------------------------------------------------------------
 
-IV. LAYER DEFINITIONS
-1. SIGNAL
+## PRIMITIVE (Canonical Structural Unit --- SET IN STONE)
 
-Definition:
-Raw textual material directly from source.
+Primitive = irreducible structural extraction unit.
 
-Includes:
+Primitive is admitted only through PAT (Primitive Admission Test).
 
-Author claims
+Full Primitive Schema (unabridged):
 
-Examples
+1.  PRIMITIVE_ID
+2.  MECHANISM_NAME
+3.  ABSTRACT_STRUCTURE (2--5 lines)
+4.  FORMAL_DESCRIPTION (equation, inequality, mapping, graph logic)
+5.  PERCEPTUAL_DESCRIPTION (intuitive articulation)
+6.  VARIABLE_LIST (typed, categorized: state, gradient, threshold,
+    stochastic)
+7.  RELATIONSHIP_MODEL (detailed directional dependencies)
+8.  ASSUMPTIONS (explicit environmental and rationality assumptions)
+9.  BOUNDARY_CONDITIONS (environmental constraints)
+10. BREAK_CONDITIONS (collapse cases)
+11. FAILURE_MODES (misapplication risks)
+12. OBSERVABLE_SIGNALS (real-world detectability cues)
+13. TRANSFER_MAP (cross-domain mapping lines)
+14. DATA_ENCODING_TEMPLATE (node types, edge types, gradients,
+    thresholds)
+15. ISOMORPHISM_CLASS (family grouping)
+16. DEPENDENCY_GRAPH_LINKS (which primitives rely on which)
 
-Mechanisms
+Primitive is canon. Primitive is durable. Primitive is encodable.
 
-Data
+------------------------------------------------------------------------
 
-Case studies
+# IV. FOUR-LAYER SYNTHESIS DOCTRINE (FULL EXPANSION)
 
-Analogies
+## LAYER 1 --- STRUCTURAL SYNTHESIS
+
+Purpose: Transform textual claims into formalizable causal mechanisms.
+
+Responsibilities: - Extract variables. - Identify gradients. - Detect
+threshold behaviors. - Identify asymmetries. - Capture feedback loops. -
+Detect non-linearities. - Separate static from dynamic behavior.
+
+Risks: - Over-abstraction. - Mechanism conflation. - Premature
+compression.
+
+------------------------------------------------------------------------
+
+## LAYER 2 --- NARRATIVE CONTINUITY
+
+Purpose: Preserve structural context provided by author sequencing.
+
+Responsibilities: - Track order of mechanism introduction. - Record
+didactic scaffolding. - Capture example logic. - Identify rhetorical
+emphasis. - Detect metaphorical framing that implies mechanism.
+
+Risks: - Narrative inflation. - Romanticizing the text. - Confusing
+example with mechanism.
+
+------------------------------------------------------------------------
+
+## LAYER 3 --- EPISTEMIC INTEGRITY (Adversarial Constraint)
+
+Purpose: Guard against structural hallucination.
+
+Responsibilities: - Claim vs interpretation labeling. - Source
+anchoring. - Scope limitation. - Explicit assumption declaration. -
+Falsifiability identification. - Counterexample exploration.
+
+Adversarial Direction: Against overreach. Against projection. Against
+mythologizing.
+
+Risks: - Over-cynicism. - Excessive fragmentation.
+
+------------------------------------------------------------------------
+
+## LAYER 4 --- COHERENCE INTEGRATION
+
+Purpose: Maintain global ontology stability.
+
+Responsibilities: - Detect duplicate skeletons. - Identify structural
+isomorphisms. - Resolve contradictory primitives. - Merge overlapping
+mechanisms. - Map family classes (Pressure, Threshold, Feedback,
+Asymmetry, etc.).
+
+------------------------------------------------------------------------
+
+### LAYER 4C --- NAMELESS PRUNING (Disciplined Entropy)
+
+Definition: Removal of structural redundancy and low-density constructs
+to preserve energy flow within ontology.
 
 Rules:
 
-Signal may be quoted.
+1.  Duplicate causal skeleton → merge.
+2.  Redundant abstraction → remove.
+3.  Weak break conditions → downgrade to Kernel.
+4.  Non-transferable construct → label domain-bound.
+5.  Excessive variable sprawl → split or prune.
 
-“VERBATIM” label is only used when exact source text is provided.
+Pruning is not compression. Pruning is selective elimination for
+coherence.
 
-Signal cannot be paraphrased and labeled verbatim.
+------------------------------------------------------------------------
 
-Signal is noisy.
-Signal contains redundancy.
-Signal contains rhetoric.
+# V. PRIMITIVE ADMISSION TEST (PAT) --- FULL FORM
 
-Signal is not yet structural.
+A Kernel may be promoted only if:
 
-2. KERNEL
+1.  Irreducible without causal loss.
+2.  Encodable as graph or equation.
+3.  Break conditions observable in practice.
+4.  Transferable or explicitly domain-bound.
+5.  Survives isomorphism scan.
+6.  Survives contradiction attempt.
+7.  Survives adversarial reinterpretation test.
 
-Definition:
-Mechanism distilled from signal without narrative language.
+Failure at any stage → remains Kernel.
 
-Kernel expresses:
+------------------------------------------------------------------------
 
-Causal claim
+# VI. OPERATOR WORKFLOW (DETAILED)
 
-Structural rule
+1.  Signal Harvest (complete coverage pass)
+2.  Kernel Clustering (mechanism hypothesis grouping)
+3.  Variable Extraction Pass
+4.  Causal Skeleton Mapping
+5.  PAT Gate
+6.  Primitive Emission
+7.  Dependency Graph Mapping
+8.  Coherence Scan
+9.  Isomorphism Merge Pass
+10. Nameless Pruning Pass
+11. Version Freeze
+12. Transfer Validation
+13. Stress-Test Across Domains
+14. Synthesis Eligibility Check
 
-Conditional logic
+No skipping. No silent edits. Version increment mandatory.
 
-Incentive relationship
+------------------------------------------------------------------------
 
-Constraint mechanism
+# VII. SYNTHESIS ELIGIBILITY GATE
 
-Kernel format:
+Cross-book synthesis requires:
 
-KERNEL:
-If X condition,
-Then Y mechanism,
-Because Z structural reason.
+-   ≥ 12 stable primitives
+-   ≥ 2 contradiction attempts per primitive
+-   ≥ 3 domain confirmations per primitive
+-   Zero unresolved structural conflicts
 
-Kernel must:
+------------------------------------------------------------------------
 
-Remove adjectives.
+# VIII. EVOLUTIONARY LOOP
 
-Remove persuasion.
+Extract → Promote → Integrate → Prune → Stress-Test → Update → Freeze
 
-Remove metaphor.
+Growth is controlled. Accumulation without pruning is forbidden.
 
-Preserve logic.
+------------------------------------------------------------------------
 
-Preserve falsifiability.
+# IX. FINAL DECLARATION
 
-Kernel is testable.
-Kernel must contain a break condition.
+This document represents the unabridged articulation of the Book
+Extraction Machine doctrine.
 
-Break Condition Template:
-This kernel fails if:
+Lean operational versions may be derived from this master artifact.
 
-A counterexample exists where X occurs but Y does not follow.
+This is the mountain. Other documents are maps.
 
-Or if Z is demonstrably false.
+SET IN STONE.
 
-No kernel may be stored without break conditions.
 
-3. PRIMITIVE (CANONICAL IRREDUCIBLE UNIT)
+---
 
-Definition:
-A Primitive is the smallest structurally independent, falsifiable rule extracted from text.
+# EXECUTION LAYER REFERENCE (LOCKED)
 
-A Primitive:
+This SSOT defines **doctrine** (what the machine *is*).
 
-Cannot be subdivided without loss of logic.
+The deterministic execution protocol (how the machine is *run*) is defined in:
 
-Contains one structural mechanism only.
+- BOOKEXTRACTORMACHINE_PROTOCOLS_V001_DETERMINISTIC_FULL_COMPREHENSIVE.md
 
-Contains explicit conditions.
+Rules:
+- Doctrine (this file) and Protocol (the protocol file) are separate layers.
+- Do not paste/merge protocol text into this SSOT.
+- Execution must follow the protocol file; any deviation must be logged in the COHERENCE REPORT / ERROR LEDGER.
 
-Contains break conditions.
-
-Contains perceptual and formal separation.
-
-Primitive Schema (MANDATORY UNIFORM FORMAT):
-
-PRIMITIVE_ID:
-Source:
-Chapter:
-Signal Reference:
-Domain:
-Layer Tag:
-
-FORMAL_STATEMENT:
-(Strict logical statement of mechanism.)
-
-CONDITIONS:
-(List explicit required conditions.)
-
-MECHANISM:
-(Explain structural causation concisely.)
-
-BREAK_CONDITIONS:
-(Explicit falsification scenarios.)
-
-FAILURE_MODES:
-(Common misapplications.)
-
-TRANSFER_CANDIDATES:
-(Potential cross-domain mappings.)
-
-CONFIDENCE_LEVEL:
-(Low / Medium / High, based on evidence strength.)
-
-Perceptual Section (Separate Block):
-
-PERCEPTUAL_SIGNATURE:
-(How it “feels” in live system observation.)
-
-OBSERVABLE_INDICATORS:
-(Concrete measurable cues.)
-
-WARNING_FLAGS:
-(Signs of misclassification.)
-
-Formal and perceptual blocks must remain separate.
-
-Never blend them.
-
-4. STRUCTURE MAP
-
-Definition:
-Graph of Primitives and their relationships.
-
-Structure Map identifies:
-
-Reinforcing primitives.
-
-Balancing primitives.
-
-Preconditions between primitives.
-
-Dependency chains.
-
-Collapse triggers.
-
-Structure Map Output Requirements:
-
-Directed connections.
-
-Edge type classification (causal / amplifying / constraining).
-
-No narrative explanation.
-
-Pure structural mapping.
-
-Structure Map must not invent primitives.
-
-It may only use extracted primitives.
-
-5. TRANSFER MAP
-
-Definition:
-Cross-domain applicability testing.
-
-Each Primitive must undergo transfer interrogation.
-
-Transfer Map Template:
-
-ORIGINAL_DOMAIN:
-TARGET_DOMAIN:
-Structural Equivalent:
-Adjustment Required:
-Failure Risk:
-
-Transfer only allowed if:
-
-Mechanism remains intact.
-
-Incentive gradients are analogous.
-
-Constraints are comparable.
-
-Transfer must include new break conditions.
-
-No universalization allowed.
-
-V. UNIFORM DATA ENCODING STANDARD
-
-All primitives must follow exact formatting.
-
-No stylistic variation allowed.
-
-No synonym substitution for structural headers.
-
-All caps for schema headers.
-
-Colon after header.
-
-Single blank line separation between schema sections.
-
-This ensures:
-
-Machine readability.
-
-Version tracking.
-
-Schema stability.
-
-Tool compatibility.
-
-VI. SCIENTIFIC RIGOR REQUIREMENTS
-
-Every extraction must include:
-
-Explicit assumptions.
-
-Explicit break conditions.
-
-Explicit counterexample search.
-
-Probability estimate if empirical claim.
-
-Scope boundaries.
-
-No structural claim may be universal unless proven.
-
-All primitives are provisional.
-
-Revision protocol:
-
-If contradiction found:
-
-Log.
-
-Amend primitive.
-
-Version increment.
-
-Preserve old version in archive.
-
-No silent edits.
-
-VII. BREAK CONDITION DOCTRINE
-
-Break Conditions are not negative framing.
-
-Break Conditions define epistemic boundary.
-
-Break Conditions must include:
-
-Condition failure.
-
-Mechanism inversion.
-
-External override scenario.
-
-If Break Conditions are absent:
-
-Primitive is invalid.
-
-VIII. FAILURE MODES OF EXTRACTION
-
-Narrative Contamination:
-Injecting author's rhetoric into kernel.
-
-Overcompression:
-Merging multiple mechanisms into one primitive.
-
-Premature Synthesis:
-Building framework before primitive stability.
-
-Domain Drift:
-Assuming cross-domain validity without transfer mapping.
-
-Ego Inflation:
-Treating extraction as intellectual performance.
-
-Tool Contamination:
-Allowing formatting tools to alter schema structure.
-
-IX. VERSION CONTROL PROTOCOL
-
-Every extraction session must log:
-
-Date
-
-Source
-
-Chapter
-
-Primitive count
-
-Revisions made
-
-Break condition changes
-
-File naming standard:
-
-BOOKEXTRACT_[SOURCE]_PRIMITIVES_V###.md
-
-No spaces.
-No emojis.
-No decorative formatting.
-
-X. LAYERED SEPARATION DOCTRINE
-
-Formal Layer:
-
-Logic.
-
-Conditions.
-
-Mechanism.
-
-Falsifiability.
-
-Perceptual Layer:
-
-Lived pattern recognition.
-
-Observational cues.
-
-Felt signatures.
-
-These must never collapse into one block.
-
-Reason:
-
-Perception guides recognition.
-Formalism guards accuracy.
-
-Without separation:
-Extraction degrades into opinion.
-
-XI. SYNTHESIS ELIGIBILITY RULE
-
-Synthesis only allowed when:
-
-≥ 20 stable primitives.
-
-No unresolved break conflicts.
-
-Transfer mapping performed on ≥ 30% of primitives.
-
-At least 2 contradiction attempts documented.
-
-If not satisfied:
-Remain in extraction mode.
-
-XII. INTERFACE WITH SYSTEMS-SEER TRAINING
-
-This extraction machine aligns with:
-
-Structural clarity under uncertainty 
-
-SYSTEMSSEERMARKETMASTERSSOTV001
-
-Measurable progression metrics 
-
-SYSTEMSSEERMARKETMASTERYMETRICS…
-
-Modeling over reading doctrine 
-
-MAGNUMOPUSTRAININGBLUEPRINTV002…
-
-Book extraction is modeling.
-
-Not summarization.
-Not admiration.
-
-XIII. NORTH STAR
-
-Extract structure.
-Preserve falsifiability.
-Enable transfer.
-Prevent distortion.
-Remain calm inside complexity.
-
-© 2026 Alexander Pisko. All rights reserved.
