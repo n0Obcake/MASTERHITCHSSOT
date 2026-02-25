@@ -1,0 +1,347 @@
+# BOOKEXTRACTORMACHINE_PROTOCOLS_V002_DETERMINISTIC_FULL_COMPREHENSIVE
+
+Version: V002\
+Status: DETERMINISTIC PROTOCOL LAYER (Operator & Audit)\
+Date: 2026-02-25\
+Author: Alexander Pisko
+
+© 2026 Alexander Pisko. All rights reserved.
+
+------------------------------------------------------------------------
+
+# 0. PURPOSE
+
+This document converts the Book Extraction Machine doctrine into
+**deterministic, stepwise, audit-friendly protocols**.
+
+It is intended to be executed repeatedly with minimal ambiguity, minimal
+operator discretion, and maximal reproducibility.
+
+This protocol layer assumes the doctrine in: -
+BOOKEXTRACTORMACHINE_SSOT_V005_UNABRIDGED_MASTER.md
+
+------------------------------------------------------------------------
+
+# 1. DEFINITIONS
+
+## 1.1 Artifacts
+
+-   **SOURCE**: The book / article / transcript being extracted.
+-   **SIGNAL LOG**: High-volume capture file, ordered, with SOURCE
+    anchors.
+-   **KERNEL MAP**: Cluster file that groups SIGNAL_IDs into candidate
+    mechanisms.
+-   **PRIMITIVE LIBRARY**: Canon file of admitted primitives only.
+-   **STRUCTURE MAP**: Graph encoding file
+    (nodes/edges/gradients/thresholds).
+-   **TRANSFER MAP**: Cross-domain mapping file.
+-   **COHERENCE REPORT**: Conflict/merge/prune ledger for a run.
+-   **MVP PACK**: Optional small drill pack derived after coherence
+    pass.
+-   **ROLLUP**: Verbatim-to-thread or session output consolidation
+    (audit trail).
+
+## 1.2 States
+
+-   **STAGING**: Signals + Kernels are allowed.
+-   **CANON**: Only admitted Primitives are allowed.
+-   **FROZEN**: Version is locked; changes require new version.
+
+------------------------------------------------------------------------
+
+# 2. INVARIANTS (NON-NEGOTIABLE RULES)
+
+1.  **No silent edits.** All changes require a version bump and a
+    changelog entry.
+2.  **VERBATIM is reserved.** "VERBATIM" label applies only to exact
+    quoted source text with precise source pointer.
+3.  **Promotion is gated.** Nothing becomes a Primitive without passing
+    PAT.
+4.  **Canon stays lean.** If unsure, downgrade to Kernel.
+5.  **Break conditions are mandatory.** No Primitive without explicit
+    collapse cases.
+6.  **Coherence is mandatory.** No synthesis before coherence pass.
+7.  **Pruning is mandatory.** Coherence Integration includes Nameless
+    Pruning.
+8.  **Determinism preference.** Where choice exists, use default rules
+    instead of "judgment."
+9.  **Auditability preference.** Any subjective call must be logged
+    explicitly in COHERENCE REPORT.
+
+------------------------------------------------------------------------
+
+# 3. FILE NAMING & VERSIONING (DDD-FIRST)
+
+## 3.1 Naming Convention
+
+-   ALL-ONE-STRING filenames
+-   Version encoded as V### (3 digits)
+-   Prefer descriptive, stable prefixes
+
+Examples: - BOOKEXTRACT_SIGNALS\_`<BOOKKEY>`{=html}*V001.md -
+BOOKEXTRACT_KERNELS*`<BOOKKEY>`{=html}*V001.md -
+BOOKEXTRACT_PRIMITIVES*`<BOOKKEY>`{=html}*V001.md -
+BOOKEXTRACT_COHERENCEREPORT*`<BOOKKEY>`{=html}\_V001.md -
+BOOKEXTRACTORMACHINE_PROTOCOLS_V001_DETERMINISTIC_FULL_COMPREHENSIVE.md
+
+## 3.2 Version Rules
+
+-   Any content change → new version file.
+-   No overwriting old versions.
+-   New version must include CHANGES section.
+
+------------------------------------------------------------------------
+
+# 4. EXECUTION PIPELINE (DETERMINISTIC)
+
+## 4.1 Stage 0 --- Setup
+
+**Inputs required:** - SOURCE identifier (title, author, edition/date if
+possible) - Extraction scope (chapters/sections) - Tooling constraints
+(manual, assisted, multi-thread, etc.)
+
+**Outputs created:** - SIGNAL LOG V001 (empty skeleton) - KERNEL MAP
+V001 (empty skeleton) - PRIMITIVE LIBRARY V001 (empty skeleton) -
+COHERENCE REPORT V001 (empty skeleton)
+
+**Stop condition:** If any output file is missing, do not proceed.
+
+------------------------------------------------------------------------
+
+## 4.2 Stage 1 --- Signal Harvest (Coverage Pass)
+
+**Goal:** capture maximal signal with minimal structure.
+
+**Deterministic Rules:** 1. Iterate SOURCE in order. 2. For each
+paragraph/diagram/table, decide: EXTRACT or SKIP. 3. If EXTRACT: create
+one or more SIGNAL entries. 4. Each SIGNAL must include: - SIGNAL_ID
+(incremental) - SOURCE_POINTER - CLAIM_TYPE - VERBATIM_TEXT (only if
+quoted exactly; otherwise blank) - MINIMAL_PARAPHRASE (≤ 2 lines) -
+CONTEXT_TAGS (comma-separated) - NOTES (optional)
+
+**Claim Type Enum:** - DESCRIPTIVE - PRESCRIPTIVE - CAUSAL -
+CONDITIONAL - DEFINITION - HEURISTIC - EXAMPLE - WARNING - META (author
+method)
+
+**Extraction Heuristic (deterministic default):** - Extract anything
+that is: - a definition - a causal claim - a conditional rule - a
+sizing/frequency rule - an explicit boundary/break case - a worked
+example that demonstrates a mechanism - a "key lesson / takeaway"
+
+**Skip Heuristic (deterministic default):** - Skip repeated prose that
+adds no new mechanism or constraint.
+
+**Stop condition:** reach end of scope.
+
+------------------------------------------------------------------------
+
+## 4.3 Stage 2 --- Kernel Clustering (Mechanism Hypothesis)
+
+**Goal:** compress signals into candidate mechanisms.
+
+**Deterministic Rules:** 1. Create Kernel buckets by MECHANISM_NAME. 2.
+Each kernel must contain 3--7 supporting SIGNAL_IDs. 3. If a bucket
+would exceed 7: - split into KERNEL_A / KERNEL_B (same mechanism family,
+different sub-mechanism). 4. Each Kernel must include: - KERNEL_ID -
+MECHANISM_NAME - CORE_CAUSAL_STATEMENT (≤ 2 lines) -
+SUPPORTING_SIGNAL_IDS (3--7) - INITIAL_VARIABLE_SET (list) -
+PRELIMINARY_BOUNDARY (≤ 3 bullets) - PRELIMINARY_BREAK_CONDITION (≤ 3
+bullets)
+
+**Stop condition:** all signals are assigned to a kernel or explicitly
+marked UNCLUSTERED.
+
+------------------------------------------------------------------------
+
+## 4.4 Stage 3 --- PAT Gate (Promotion Decision)
+
+**Goal:** decide which kernels become primitives.
+
+For each Kernel, run PAT:
+
+### PAT Checklist (binary pass/fail per item)
+
+1.  **Irreducible:** cannot split without losing causal meaning
+2.  **Encodable:** can be represented as nodes/edges/thresholds or
+    equation/inequality
+3.  **Operational break:** at least 1 observable break condition exists
+4.  **Transferable:** maps to ≥ 3 domains OR explicitly labeled
+    DOMAIN-BOUND
+5.  **Non-redundant:** passes isomorphism scan (see Stage 6)
+6.  **Adversarial survive:** survives contradiction attempt (see Stage
+    5)
+
+**Decision Rules (deterministic):** - If PASS on all 6 → PROMOTE - If
+FAIL on any → HOLD as KERNEL - If FAIL due to redundancy → MERGE
+candidate - If FAIL due to missing break conditions → DOWNGRADE (keep as
+kernel; add missing research note)
+
+**Stop condition:** every kernel has a PROMOTE/HOLD/MERGE/DOWNGRADE
+disposition recorded.
+
+------------------------------------------------------------------------
+
+## 4.5 Stage 4 --- Primitive Emission (Canon)
+
+**Goal:** write admitted primitives into the PRIMITIVE LIBRARY.
+
+**Deterministic Rules:** - One Primitive per promoted Kernel. - Use full
+schema fields in SSOT V005. - Fields must be present even if minimal
+(use "UNKNOWN / TBD" only if explicitly logged).
+
+**Mandatory minimal content per field:** - ABSTRACT_STRUCTURE: 1--5
+lines - VARIABLE_LIST: ≥ 3 variables - BREAK_CONDITIONS: ≥ 1 -
+DATA_ENCODING_TEMPLATE: ≥ 1 node + 1 edge + 1 threshold/gradient
+
+**Stop condition:** all promoted kernels have corresponding primitives.
+
+------------------------------------------------------------------------
+
+## 4.6 Stage 5 --- Epistemic Integrity Pass (Adversarial)
+
+**Goal:** prevent drift from source and prevent overreach.
+
+**Deterministic Tests for each Primitive:** 1. **Claim separation
+test:** label each statement as SOURCE-CLAIM or INTERPRETATION. 2.
+**Assumption audit:** list all assumptions; any unstated assumption must
+be added. 3. **Counterexample attempt:** propose 1 scenario where the
+primitive fails. 4. **Scope boundary statement:** specify where it
+should not be applied.
+
+**Stop condition:** each primitive has Integrity Pass recorded (PASS /
+NEEDS-PATCH).
+
+------------------------------------------------------------------------
+
+## 4.7 Stage 6 --- Coherence Integration (Isomorphism + Conflict)
+
+**Goal:** keep ontology consistent and non-bloated.
+
+### 6.1 Isomorphism Scan (deterministic)
+
+For each new Primitive: - Compare causal skeleton against existing
+primitives. - If skeleton is equivalent up to renaming variables →
+ISOMORPHIC.
+
+**Disposition:** - If isomorphic → MERGE (do not add new primitive) - If
+partially overlapping → LINK as VARIANT under existing primitive - If
+unique → KEEP
+
+### 6.2 Conflict Scan (deterministic)
+
+-   If two primitives imply contradictory predictions under same
+    conditions → CONFLICT.
+
+**Disposition:** - Add both to COHERENCE REPORT. - Resolve by: 1)
+narrowing scope (preferred) 2) splitting conditions (second) 3) pruning
+weaker one (last)
+
+**Stop condition:** no unresolved conflicts remain OR they are
+explicitly flagged as OPEN CONFLICT with next actions.
+
+------------------------------------------------------------------------
+
+## 4.8 Stage 7 --- Nameless Pruning Pass (Energy Density Enforcement)
+
+**Goal:** remove redundancy and low-density constructs to preserve
+energy flow.
+
+**Deterministic Prune Rules:** Prune (or downgrade to Kernel) if any are
+true: 1. No observable break conditions 2. Not encodable 3. Transfer map
+cannot reach 3 domains and is not labeled DOMAIN-BOUND 4. Duplicates
+another causal skeleton 5. Requires \> 12 variables to express (split
+first; if still bloated, prune)
+
+**Stop condition:** PRIMITIVE LIBRARY contains only high-density,
+coherent primitives.
+
+------------------------------------------------------------------------
+
+## 4.9 Stage 8 --- Output Products
+
+After coherence + pruning:
+
+-   STRUCTURE MAP: node/edge graph representation
+-   TRANSFER MAP: domain mappings
+-   OPTIONAL MVP PACK: smallest drill set
+
+**Deterministic MVP selection rule:** Select the top N primitives
+with: - highest transfer breadth - clearest break conditions - strongest
+observability (where N default = 12)
+
+------------------------------------------------------------------------
+
+# 5. AUDIT LEDGERS (MANDATORY)
+
+## 5.1 COHERENCE REPORT Fields
+
+-   VERSION
+-   DATE
+-   NEW PRIMITIVES ADDED
+-   MERGES PERFORMED
+-   VARIANTS LINKED
+-   PRUNES/DOWNGRADES
+-   OPEN CONFLICTS
+-   SUBJECTIVE CALLS (with rationale)
+
+## 5.2 ERROR LEDGER (OPTIONAL BUT RECOMMENDED)
+
+Record: - Mislabelled verbatim - Missing citations when required -
+Skipped stages - Drift incidents
+
+------------------------------------------------------------------------
+
+# 6. DENSITY BUDGETS (OPERATIONAL LEAN MODE)
+
+This master protocol is unabridged.\
+Lean mode enforces caps:
+
+-   Variables ≤ 12
+-   Relationship model ≤ 4 lines
+-   Assumptions ≤ 5 bullets
+-   Break conditions ≤ 5 bullets
+-   Transfer map 1 line/domain
+
+If a primitive cannot fit, split it.
+
+------------------------------------------------------------------------
+
+# 7. "MEASURE TWICE, CUT ONCE" CHECKLIST (RUN BEFORE FREEZE)
+
+Before freezing a version:
+
+1.  All promoted primitives passed PAT.
+2.  All primitives have break conditions.
+3.  Coherence pass completed.
+4.  Pruning pass completed.
+5.  Version + changelog updated.
+6.  Rollup saved for audit.
+
+If any fail → do not freeze.
+
+------------------------------------------------------------------------
+
+# 8. FINAL
+
+This deterministic protocol layer is designed to keep the extractor: -
+efficient - reproducible - anti-bloat - anti-drift - long-horizon
+durable
+
+SET IN STONE when accepted.
+
+
+---
+
+# DOCTRINE LAYER REFERENCE (LOCKED)
+
+This document defines **execution protocol** (how the machine is run).
+
+The doctrinal architecture (what the machine is) is defined in:
+
+- BOOKEXTRACTORMACHINE_SSOT_V006_UNABRIDGED_MASTER.md
+
+Rules:
+- Do not embed doctrinal expansions here.
+- If protocol and doctrine appear in tension, do not silently reconcile.
+- Log discrepancy in COHERENCE REPORT and bump version.
+
