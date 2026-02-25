@@ -1,6 +1,6 @@
-# BEE_PROTOCOLS_V003_DETERMINISTIC
+# BEE_PROTOCOLSV005
 
-Version: V003\
+Version: V005\
 Status: DETERMINISTIC PROTOCOL LAYER (Operator & Audit)\
 Date: 2026-02-25\
 Author: Alexander Pisko
@@ -9,17 +9,35 @@ Author: Alexander Pisko
 
 ------------------------------------------------------------------------
 
+# CHANGES (V005)
+
+This version adds hardened deterministic MODE definitions (FULL / HYBRID
+/ QUICK) with MUST/SHALL language for ontology-priority execution.
+
+-   FULL defined as canonical ontological build mode.
+-   HYBRID defined as lean serious mode with strict exclusion rules.
+-   QUICK defined as reconnaissance-only spine extraction mode.
+-   Deterministic admission rules strengthened for convergence.
+
+Core stages 0--8 remain unchanged.
+
+------------------------------------------------------------------------
+
 # CHANGES (V003)
 
-This version adds a deterministic **operator surface** without altering the core stage pipeline:
+This version adds a deterministic **operator surface** without altering
+the core stage pipeline:
 
-- Mandatory **Operator Commencement Declaration** (pre-Stage 0) to eliminate run-start ambiguity.
-- Optional **BEE SCOUT** (light whole-source scan) as a *non-harvesting* reconnaissance routine.
-- **RUN STATE MACHINE** + **COMMAND SEMANTICS** (NECTAR / NEXT / PAUSE / ZIP) with strict validity rules.
-- **CAROUSEL MODE** wrapper (15-Signal stacks) including deterministic end-of-stack behavior (STACK COMPLETE no-op).
+-   Mandatory **Operator Commencement Declaration** (pre-Stage 0) to
+    eliminate run-start ambiguity.
+-   Optional **BEE SCOUT** (light whole-source scan) as a
+    *non-harvesting* reconnaissance routine.
+-   **RUN STATE MACHINE** + **COMMAND SEMANTICS** (NECTAR / NEXT / PAUSE
+    / ZIP) with strict validity rules.
+-   **CAROUSEL MODE** wrapper (15-Signal stacks) including deterministic
+    end-of-stack behavior (STACK COMPLETE no-op).
 
-Core stages 0–8 remain unchanged.
-
+Core stages 0--8 remain unchanged.
 
 ------------------------------------------------------------------------
 
@@ -84,117 +102,187 @@ BOOKEXTRACTORMACHINE_SSOT_V006_UNABRIDGED_MASTER.md
 
 ------------------------------------------------------------------------
 
-
-
 # 2A. OPERATOR COMMENCEMENT (MANDATORY PRE-STAGE 0)
 
-Before **Stage 0** begins, the operator must declare the run parameters below.
-This replaces ad-hoc conversational branching and is required for deterministic starts.
+Before **Stage 0** begins, the operator must declare the run parameters
+below. This replaces ad-hoc conversational branching and is required for
+deterministic starts.
 
 ## 2A.1 Operator Commencement Declaration (OCD)
 
-Record these fields at the top of the COHERENCE REPORT (or in the chat header for the run):
+Record these fields at the top of the COHERENCE REPORT (or in the chat
+header for the run):
 
-- **BOOKKEY**: stable identifier (ALL-ONE-STRING)
-- **SOURCE**: title/author/edition (or URL if applicable)
-- **SCOPE**: what portion will be processed this run (e.g., FULL_BOOK, CH01-CH05, PART6_ONLY)
-- **MODE**: FULL | HYBRID | QUICK | SPLIT
-- **CADENCE**: CONTINUOUS | CAROUSEL
-- **STACK_SIZE**: default = 15 (only used if CADENCE=CAROUSEL)
-- **AUTO_PAUSE_RULE**: STACK_END | CYCLE_END (default = STACK_END)
-- **CLUSTERING_TRIGGER**: default = AFTER_CYCLE (i.e., after 3 stacks / 45 signals) unless explicitly overridden
-- **TOOLING_CONSTRAINTS**: manual/assisted; any parsing limits
+-   **BOOKKEY**: stable identifier (ALL-ONE-STRING)
+-   **SOURCE**: title/author/edition (or URL if applicable)
+-   **SCOPE**: what portion will be processed this run (e.g., FULL_BOOK,
+    CH01-CH05, PART6_ONLY)
+-   **MODE**: FULL \| HYBRID \| QUICK \| SPLIT
+-   **CADENCE**: CONTINUOUS \| CAROUSEL
+-   **STACK_SIZE**: default = 15 (only used if CADENCE=CAROUSEL)
+-   **AUTO_PAUSE_RULE**: STACK_END \| CYCLE_END (default = STACK_END)
+-   **CLUSTERING_TRIGGER**: default = AFTER_CYCLE (i.e., after 3 stacks
+    / 45 signals) unless explicitly overridden
+-   **TOOLING_CONSTRAINTS**: manual/assisted; any parsing limits
 
 **Stop condition:** If any field is missing, do not proceed to Stage 0.
 
-## 2A.2 Mode Definitions (deterministic)
+## 2A.2 Mode Definitions (HARDENED --- V005)
 
-- **FULL**: Extract all mechanism-bearing content; minimal skipping except pure repetition.
-- **HYBRID**: Extract definitions/causal/conditional/procedural/boundary content; skip narrative padding unless it contains new constraint/mechanism.
-- **QUICK**: Extract only high-density mechanism spikes (definitions, key causal rules, explicit break conditions, compact worked examples).
-- **SPLIT**: Different MODE per SCOPE segment. Must be explicitly declared in OCD as a mapping, e.g.:
-  - CH01-CH02=HYBRID; CH03=FULL; CH04-CH05=HYBRID; PART6=FULL
+### FULL (CANONICAL BUILD MODE)
+
+FULL SHALL be the default serious ontology-building mode.
+
+Admission Unit: - One sentence OR one bullet item. Each admitted item
+MUST include: - VERBATIM_TEXT (exact reproduction) - SOURCE_POINTER
+
+A sentence SHALL be admitted if it satisfies ANY of the following:
+
+1.  Definition of a term or construct.
+2.  Explicit causal relation.
+3.  Conditional rule (if/when/unless/only if).
+4.  Process step or ordered action.
+5.  Constraint, limitation, or prerequisite.
+6.  Decision rule or selection criteria.
+7.  Framework component (enumerated stage/axis/category).
+8.  Role mapping (actor → responsibility).
+9.  Explicit break, failure, or collapse condition.
+10. Worked example demonstrating a mechanism.
+11. Explicit scope limitation.
+
+If ANY condition above is satisfied → admission is REQUIRED. If NONE are
+satisfied → admission is FORBIDDEN.
+
+No thinning rules apply. No density caps apply. No early compression
+allowed.
+
+Default bias: inclusion over omission.
+
+------------------------------------------------------------------------
+
+### HYBRID (LEAN SERIOUS MODE)
+
+HYBRID SHALL preserve ontological completeness while excluding
+non-mechanistic padding.
+
+Admit all content meeting FULL criteria.
+
+Exclude only: - Narrative illustration that introduces no new variable,
+condition, constraint, or mechanism. - Exact repetition of previously
+admitted mechanism without modification.
+
+If ambiguity exists → admission SHALL default to inclusion.
+
+No arbitrary caps allowed.
+
+------------------------------------------------------------------------
+
+### QUICK (RECON MODE)
+
+QUICK SHALL be used for terrain mapping only.
+
+Admit only: - Definitions - Core mechanism statements - Explicit
+decision rules - Explicit break conditions
+
+Maximum: 5 admissions per section.
+
+If more than 5 qualify: - Admit first 5 by order of appearance.
+
+QUICK SHALL NOT be used for canonical ontology building.
 
 # 2B. OPTIONAL SCOUT (NON-HARVESTING)
 
 ## 2B.1 BEE SCOUT (Light Whole-Source Scan)
 
-**Purpose:** produce a terrain map and a MODE recommendation before locking intensity.
-SCOUT does **not** create Signals, Kernels, or Primitives.
+**Purpose:** produce a terrain map and a MODE recommendation before
+locking intensity. SCOUT does **not** create Signals, Kernels, or
+Primitives.
 
 **Inputs required:** SOURCE, intended SCOPE (usually FULL_BOOK)
 
-**Outputs created (light):**
-- STRUCTURE MAP (light): section/chapter list + density notes
-- MODE RECOMMENDATION: FULL/HYBRID/QUICK/SPLIT + one-line rationale
-- HAZARD ZONES: sections with higher misuse risk (influence/manipulation)
+**Outputs created (light):** - STRUCTURE MAP (light): section/chapter
+list + density notes - MODE RECOMMENDATION: FULL/HYBRID/QUICK/SPLIT +
+one-line rationale - HAZARD ZONES: sections with higher misuse risk
+(influence/manipulation)
 
 **Stop condition:** end of scope reached.
 
 # 2C. RUN STATE MACHINE (OPERATOR SURFACE)
 
-This state machine governs **run control**, not document states (STAGING/CANON/FROZEN).
+This state machine governs **run control**, not document states
+(STAGING/CANON/FROZEN).
 
 ## 2C.1 Run States
 
-- **IDLE**: no active run
-- **SCOUT**: running BEE SCOUT
-- **LOCKED**: OCD recorded; ready to begin Stage 0
-- **CONTINUOUS**: executing Stage pipeline without CAROUSEL wrapper
-- **CAROUSEL**: executing Stage 1 in fixed stacks (see 2D)
-- **PAUSED**: intentional stop; awaiting operator command
-- **ZIP**: consolidation phase (post-harvest; may include Stage 2+)
-- **COMPLETE**: run ended
+-   **IDLE**: no active run
+-   **SCOUT**: running BEE SCOUT
+-   **LOCKED**: OCD recorded; ready to begin Stage 0
+-   **CONTINUOUS**: executing Stage pipeline without CAROUSEL wrapper
+-   **CAROUSEL**: executing Stage 1 in fixed stacks (see 2D)
+-   **PAUSED**: intentional stop; awaiting operator command
+-   **ZIP**: consolidation phase (post-harvest; may include Stage 2+)
+-   **COMPLETE**: run ended
 
 ## 2C.2 Valid Transitions (deterministic)
 
-- IDLE → SCOUT (on command: BEE SCOUT)
-- IDLE → LOCKED (once OCD is recorded)
-- SCOUT → LOCKED (after scout output accepted or overridden)
-- LOCKED → CONTINUOUS (if CADENCE=CONTINUOUS)
-- LOCKED → CAROUSEL (if CADENCE=CAROUSEL)
-- CAROUSEL ↔ PAUSED (PAUSE / RESUME)
-- CONTINUOUS ↔ PAUSED (PAUSE / RESUME)
-- CAROUSEL/CONTINUOUS → ZIP (on command: ZIP) *or* after harvest completion per OCD
-- ZIP → COMPLETE
+-   IDLE → SCOUT (on command: BEE SCOUT)
+-   IDLE → LOCKED (once OCD is recorded)
+-   SCOUT → LOCKED (after scout output accepted or overridden)
+-   LOCKED → CONTINUOUS (if CADENCE=CONTINUOUS)
+-   LOCKED → CAROUSEL (if CADENCE=CAROUSEL)
+-   CAROUSEL ↔ PAUSED (PAUSE / RESUME)
+-   CONTINUOUS ↔ PAUSED (PAUSE / RESUME)
+-   CAROUSEL/CONTINUOUS → ZIP (on command: ZIP) *or* after harvest
+    completion per OCD
+-   ZIP → COMPLETE
 
 # 2D. CAROUSEL MODE (DETERMINISTIC WRAPPER)
 
-CAROUSEL is a wrapper over **Stage 1 Signal Harvest** only.
-All later stages remain available but are triggered deterministically by OCD or explicit operator commands.
+CAROUSEL is a wrapper over **Stage 1 Signal Harvest** only. All later
+stages remain available but are triggered deterministically by OCD or
+explicit operator commands.
 
 ## 2D.1 Definitions
 
-- **STACK**: a fixed-size batch of Signals. Default size = 15.
-- **CYCLE**: 3 stacks (default = 45 Signals).
+-   **STACK**: a fixed-size batch of Signals. Default size = 15.
+-   **CYCLE**: 3 stacks (default = 45 Signals).
 
 ## 2D.2 Carousel Rules (deterministic defaults)
 
-- While in CAROUSEL, produce Signals until **STACK_SIZE** is reached.
-- When STACK_SIZE is reached: output **STACK COMPLETE** and transition to **PAUSED** (default AUTO_PAUSE_RULE=STACK_END).
-- If AUTO_PAUSE_RULE=CYCLE_END: continue across 3 stacks, then output **CYCLE COMPLETE** and pause.
+-   While in CAROUSEL, produce Signals until **STACK_SIZE** is reached.
+-   When STACK_SIZE is reached: output **STACK COMPLETE** and transition
+    to **PAUSED** (default AUTO_PAUSE_RULE=STACK_END).
+-   If AUTO_PAUSE_RULE=CYCLE_END: continue across 3 stacks, then output
+    **CYCLE COMPLETE** and pause.
 
 ## 2D.3 NEXT semantics (hard rule)
 
 The command word **NEXT** is only valid in CAROUSEL:
 
-- If current stack is **not complete**: continue harvesting within the current stack.
-- If current stack **is complete**: output **STACK COMPLETE** and perform **no further action**.
-- If not in CAROUSEL: output **NEXT INVALID (STATE=<current>)** and perform **no action**.
+-   If current stack is **not complete**: continue harvesting within the
+    current stack.
+-   If current stack **is complete**: output **STACK COMPLETE** and
+    perform **no further action**.
+-   If not in CAROUSEL: output **NEXT INVALID
+    (STATE=`<current>`{=html})** and perform **no action**.
 
 # 2E. COMMAND SEMANTICS (BEE-LOCAL)
 
-These commands are local to BEE runs and must obey the run state machine.
+These commands are local to BEE runs and must obey the run state
+machine.
 
-- **BEE SCOUT**: IDLE → SCOUT. Runs 2B.1 and outputs recommendation.
-- **LOCK INTENSITY**: sets OCD MODE/CADENCE/STACK rules and moves to LOCKED (if not already).
-- **NECTAR**: begins harvesting under declared OCD. LOCKED → CAROUSEL (if CADENCE=CAROUSEL) or LOCKED → CONTINUOUS.
-- **NEXT**: see 2D.3.
-- **PAUSE**: CONTINUOUS/CAROUSEL → PAUSED (no other side effects).
-- **RESUME**: PAUSED → prior run state (CONTINUOUS or CAROUSEL).
-- **ZIP**: CAROUSEL/CONTINUOUS/PAUSED → ZIP. Consolidation begins (Stage 2+ per OCD).
-- **ABORT**: immediate stop; transition to COMPLETE; log in COHERENCE REPORT.
-
+-   **BEE SCOUT**: IDLE → SCOUT. Runs 2B.1 and outputs recommendation.
+-   **LOCK INTENSITY**: sets OCD MODE/CADENCE/STACK rules and moves to
+    LOCKED (if not already).
+-   **NECTAR**: begins harvesting under declared OCD. LOCKED → CAROUSEL
+    (if CADENCE=CAROUSEL) or LOCKED → CONTINUOUS.
+-   **NEXT**: see 2D.3.
+-   **PAUSE**: CONTINUOUS/CAROUSEL → PAUSED (no other side effects).
+-   **RESUME**: PAUSED → prior run state (CONTINUOUS or CAROUSEL).
+-   **ZIP**: CAROUSEL/CONTINUOUS/PAUSED → ZIP. Consolidation begins
+    (Stage 2+ per OCD).
+-   **ABORT**: immediate stop; transition to COMPLETE; log in COHERENCE
+    REPORT.
 
 # 3. FILE NAMING & VERSIONING (DDD-FIRST)
 
@@ -295,7 +383,7 @@ For each Kernel, run PAT:
     DOMAIN-BOUND
 5.  **Non-redundant:** passes isomorphism scan (see Stage 6)
 6.  **Adversarial survive:** survives contradiction attempt (see Stage
-    5)
+    5)  
 
 **Decision Rules (deterministic):** - If PASS on all 6 → PROMOTE - If
 FAIL on any → HOLD as KERNEL - If FAIL due to redundancy → MERGE
@@ -455,8 +543,7 @@ durable
 
 SET IN STONE when accepted.
 
-
----
+------------------------------------------------------------------------
 
 # DOCTRINE LAYER REFERENCE (LOCKED)
 
@@ -464,9 +551,8 @@ This document defines **execution protocol** (how the machine is run).
 
 The doctrinal architecture (what the machine is) is defined in:
 
-- BOOKEXTRACTORMACHINE_SSOT_V006_UNABRIDGED_MASTER.md
+-   BOOKEXTRACTORMACHINE_MASTER.md
 
-Rules:
-- Do not embed doctrinal expansions here.
-- If protocol and doctrine appear in tension, do not silently reconcile.
-- Log discrepancy in COHERENCE REPORT and bump version.
+Rules: - Do not embed doctrinal expansions here. - If protocol and
+doctrine appear in tension, do not silently reconcile. - Log discrepancy
+in COHERENCE REPORT and bump version.
