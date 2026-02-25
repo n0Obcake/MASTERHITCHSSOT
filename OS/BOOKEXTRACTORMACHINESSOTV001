@@ -1,0 +1,375 @@
+# BOOKEXTRACTORMACHINESSOTV001
+
+Version: V001  
+Status: GLOBAL SSOT  
+Author: Alexander Pisko  
+Generated: 2026-02-24  
+
+---
+
+# I. PURPOSE
+
+Define a universal architecture for extracting structural value from any dense, high-signal book.
+
+This machine converts:
+
+Dense Information  
+→ Structural Primitives  
+→ Formal Mechanisms  
+→ Break Conditions  
+→ MVP Set  
+→ Reflex Drills  
+→ Cross-Domain Transfer Map  
+
+This is not summarization.  
+This is structural harvesting.
+
+---
+
+# II. DESIGN AXIOM
+
+A “useful book” contains transferable mechanisms.
+
+Transferable mechanisms include:
+
+- Rules
+- Constraints
+- Incentive gradients
+- Tradeoff structures
+- Decision procedures
+- Equilibrium conditions
+- Failure cases
+- Instability triggers
+
+Narrative, persuasion, anecdote, stylistic padding, and rhetorical flourish are discarded unless they introduce a new structural primitive.
+
+---
+
+# III. CORE DATA STRUCTURES
+
+All extraction output is built from four primitive objects.
+
+---
+
+## A. ATOM (Structural Primitive)
+
+Smallest actionable unit.
+
+Fields:
+
+- Name (short identifier)
+- Type:
+  - Definition
+  - Mechanism
+  - Constraint
+  - Heuristic
+  - Procedure
+  - Warning
+  - Edge Case
+- Claim (one-line invariant)
+- Formal Expression:
+  - Equation
+  - IF/THEN/BECAUSE rule
+  - Decision rule
+  - Boundary condition
+- Variables (governing inputs)
+- Assumptions
+- Break Conditions
+- Counterexample (if provided or implied)
+- Source Pointer (page / section reference)
+- Transfer Map (domains applicable)
+- Drill Seed (reflex training entry point)
+
+Every ATOM must reference the book.  
+No invented content permitted.
+
+---
+
+## B. CLUSTER (Family)
+
+A group of related ATOMs.
+
+Fields:
+
+- Cluster Name
+- Purpose
+- Included ATOMs
+- Dependency Links (prerequisite ATOMs)
+
+Clusters define conceptual topology.
+
+---
+
+## C. MVP SET (Load-Bearing Beams)
+
+Top ATOMs generating maximum leverage.
+
+Fields:
+
+- MVP List
+- Score (see scoring function)
+- Replacement Coverage (what other ATOMs it explains)
+- Enables (what capabilities it unlocks)
+
+MVPs must be:
+
+- Transferable
+- Formalizable
+- Decision-impacting
+
+---
+
+## D. DRILL PACK (Reflex Engine)
+
+Training layer derived from MVPs.
+
+Fields per MVP:
+
+- 30-second drill
+- 2-minute scenario drill
+- Error taxonomy
+- Break-spotting drill
+- Spaced repetition cue
+
+Goal: convert principle into reflex.
+
+---
+
+# IV. PIPELINE STAGES
+
+---
+
+## Stage 1 — Parse & Segment
+
+- Extract headings and structural sections.
+- Build section map.
+- Ignore formatting artifacts.
+
+Output: Section Index
+
+---
+
+## Stage 2 — Atomization
+
+For each section, extract only:
+
+- Definitions
+- Rules
+- Ratios
+- Constraints
+- Procedures
+- Instability triggers
+- Explicit warnings
+
+Discard:
+
+- Narrative examples (unless structural)
+- Repetition
+- Persuasion
+
+Output: Raw ATOM List
+
+---
+
+## Stage 3 — Deduplicate & Normalize
+
+- Merge repeated concepts
+- Unify variable names
+- Remove semantic duplicates
+- Standardize formal expression format
+
+Output: Clean ATOM List
+
+---
+
+## Stage 4 — Formalization
+
+Every ATOM must be reducible to one of:
+
+- Equation
+- IF / THEN / BECAUSE
+- Boundary condition
+- Decision rule
+- Tradeoff statement
+
+If it cannot be formalized, downgrade priority.
+
+Output: Formal ATOM List
+
+---
+
+## Stage 5 — Adversarial Break Testing
+
+For each ATOM:
+
+- When does this fail?
+- What assumption collapses first?
+- What distortion invalidates it?
+- What adversary adaptation defeats it?
+
+Add break conditions explicitly.
+
+Output: Break-Conditioned ATOM List
+
+---
+
+## Stage 6 — Clustering + Dependency Graph
+
+Group ATOMs into CLUSTERS.
+
+Construct:
+
+- Conceptual families
+- Dependency DAG
+- Prerequisite chains
+
+Output:
+- Cluster Map
+- Dependency Graph
+
+---
+
+## Stage 7 — MVP Selection (Pareto Optimization)
+
+Score each ATOM 0–5 on:
+
+1. Recurrence (frequency across book)
+2. Generativity (explains other ATOMs)
+3. Decision Impact
+4. Transferability
+5. Formalizability
+6. Break Clarity
+
+Select highest scoring ATOMs with diversity constraint across clusters.
+
+Output: MVP Set
+
+---
+
+## Stage 8 — Compression Layers
+
+Produce three tiers from same truth:
+
+1. Full ATOM Index
+2. MVP Sheet (one-liners + equations + breaks)
+3. Brain-Slam Page (single page, ultra-dense, no paragraphs)
+
+If new MVPs appear in final 15% of text, repeat scoring.
+
+Extraction is complete when MVP set stabilizes.
+
+---
+
+## Stage 9 — Drill Generation
+
+For each MVP:
+
+Generate:
+
+- 30-second computation or classification drill
+- 2-minute scenario drill
+- Break-condition identification drill
+- Error pattern recognition drill
+
+Drills must be executable without external tools.
+
+---
+
+## Stage 10 — Cross-Domain Transfer Map
+
+For each MVP, map applicability to:
+
+- Markets (Flow / Pressure / Incentive / Power / Belief)
+- Governance / institutions
+- AI incentives
+- Social dynamics
+- Negotiation
+- Personal systems
+
+If non-transferable, mark explicitly.
+
+Transferability increases structural rank.
+
+---
+
+# V. OUTPUT CONTRACT
+
+Each extraction run must produce:
+
+1. ATOM_INDEX_[BOOK]_V001
+2. CLUSTERMAP_[BOOK]_V001
+3. MVPSET_[BOOK]_V001
+4. BRAINSLAM_[BOOK]_V001
+5. DRILLPACK_[BOOK]_V001
+6. TRANSFERMAP_[BOOK]_V001
+
+No run is complete without all six artifacts.
+
+---
+
+# VI. MODES
+
+## FAST MODE
+
+- Extract ATOMs
+- Build MVP Set
+- Generate Brain-Slam
+- Produce minimal Drill Pack
+
+Skip deep dependency mapping.
+
+---
+
+## FULL MODE
+
+- Full pipeline
+- Complete dependency DAG
+- Full transfer mapping
+- Adversarial stress-testing
+
+---
+
+# VII. QUALITY GATES
+
+1. No invented ATOMs.
+2. Every ATOM has source pointer.
+3. No summary paragraphs in final outputs.
+4. No rhetorical inflation.
+5. Every MVP must:
+   - Be formalizable
+   - Have break condition
+   - Be drillable
+
+Failure to meet any gate invalidates extraction.
+
+---
+
+# VIII. COMPLETION CRITERIA
+
+Extraction is complete when:
+
+- MVP Set stable
+- No new structural primitives emerge
+- Brain-Slam page fits one screen
+- Drill Pack executable daily
+- Transfer Map populated or marked non-transferable
+
+---
+
+# IX. PHILOSOPHICAL FOUNDATION
+
+Dense books contain compression of experience.
+
+This machine performs second-order compression.
+
+Information → Structure  
+Structure → Mechanism  
+Mechanism → Constraint  
+Constraint → Reflex  
+
+Reading is passive.  
+Extraction is architectural.
+
+---
+
+© 2026 Alexander Pisko. All rights reserved.
