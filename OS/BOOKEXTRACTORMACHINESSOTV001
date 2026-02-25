@@ -1,375 +1,458 @@
-# BOOKEXTRACTORMACHINESSOTV001
+BOOKEXTRACTORMACHINESSOTV002.md
 
-Version: V001  
-Status: GLOBAL SSOT  
-Author: Alexander Pisko  
-Generated: 2026-02-24  
+Version: BOOKEXTRACTORMACHINESSOTV002
+Generated: 2026-02-24
 
----
+I. DECLARED PURPOSE
 
-# I. PURPOSE
+This document defines the complete operational architecture of the Book Extraction Machine (BEM).
 
-Define a universal architecture for extracting structural value from any dense, high-signal book.
+The Book Extraction Machine is a layered synthesis protocol designed to convert unstructured textual material into formal, transferable structural knowledge.
 
-This machine converts:
+This is not summarization.
 
-Dense Information  
-→ Structural Primitives  
-→ Formal Mechanisms  
-→ Break Conditions  
-→ MVP Set  
-→ Reflex Drills  
-→ Cross-Domain Transfer Map  
+This is structural extraction.
 
-This is not summarization.  
-This is structural harvesting.
+The objective is:
 
----
+Preserve original signal.
 
-# II. DESIGN AXIOM
+Remove narrative noise.
 
-A “useful book” contains transferable mechanisms.
+Isolate irreducible structural units.
 
-Transferable mechanisms include:
+Encode them uniformly.
 
-- Rules
-- Constraints
-- Incentive gradients
-- Tradeoff structures
-- Decision procedures
-- Equilibrium conditions
-- Failure cases
-- Instability triggers
+Enable cross-domain transfer.
 
-Narrative, persuasion, anecdote, stylistic padding, and rhetorical flourish are discarded unless they introduce a new structural primitive.
+Preserve falsifiability.
 
----
+The canonical irreducible extraction unit is:
 
-# III. CORE DATA STRUCTURES
+Primitive
 
-All extraction output is built from four primitive objects.
+This term is locked and non-negotiable.
 
----
+II. CORE PHILOSOPHY
 
-## A. ATOM (Structural Primitive)
+No compression without structural mapping.
 
-Smallest actionable unit.
+No abstraction without anchor.
 
-Fields:
+No model without break condition.
 
-- Name (short identifier)
-- Type:
-  - Definition
-  - Mechanism
-  - Constraint
-  - Heuristic
-  - Procedure
-  - Warning
-  - Edge Case
-- Claim (one-line invariant)
-- Formal Expression:
-  - Equation
-  - IF/THEN/BECAUSE rule
-  - Decision rule
-  - Boundary condition
-- Variables (governing inputs)
-- Assumptions
-- Break Conditions
-- Counterexample (if provided or implied)
-- Source Pointer (page / section reference)
-- Transfer Map (domains applicable)
-- Drill Seed (reflex training entry point)
+No interpretation without perceptual separation.
 
-Every ATOM must reference the book.  
-No invented content permitted.
+No synthesis without transfer mapping.
 
----
+Extraction is not interpretation.
 
-## B. CLUSTER (Family)
+Extraction precedes synthesis.
 
-A group of related ATOMs.
+III. LAYERED SYNTHESIS PIPELINE
 
-Fields:
+The extraction pipeline is strictly layered.
 
-- Cluster Name
-- Purpose
-- Included ATOMs
-- Dependency Links (prerequisite ATOMs)
+No layer may be skipped.
 
-Clusters define conceptual topology.
+No layer may be merged informally.
 
----
+Pipeline:
 
-## C. MVP SET (Load-Bearing Beams)
+Signal → Kernel → Primitive → Structure Map → Transfer Map
 
-Top ATOMs generating maximum leverage.
+IV. LAYER DEFINITIONS
+1. SIGNAL
 
-Fields:
+Definition:
+Raw textual material directly from source.
 
-- MVP List
-- Score (see scoring function)
-- Replacement Coverage (what other ATOMs it explains)
-- Enables (what capabilities it unlocks)
+Includes:
 
-MVPs must be:
+Author claims
 
-- Transferable
-- Formalizable
-- Decision-impacting
+Examples
 
----
+Mechanisms
 
-## D. DRILL PACK (Reflex Engine)
+Data
 
-Training layer derived from MVPs.
+Case studies
 
-Fields per MVP:
+Analogies
 
-- 30-second drill
-- 2-minute scenario drill
-- Error taxonomy
-- Break-spotting drill
-- Spaced repetition cue
+Rules:
 
-Goal: convert principle into reflex.
+Signal may be quoted.
 
----
+“VERBATIM” label is only used when exact source text is provided.
 
-# IV. PIPELINE STAGES
+Signal cannot be paraphrased and labeled verbatim.
 
----
+Signal is noisy.
+Signal contains redundancy.
+Signal contains rhetoric.
 
-## Stage 1 — Parse & Segment
+Signal is not yet structural.
 
-- Extract headings and structural sections.
-- Build section map.
-- Ignore formatting artifacts.
+2. KERNEL
 
-Output: Section Index
+Definition:
+Mechanism distilled from signal without narrative language.
 
----
+Kernel expresses:
 
-## Stage 2 — Atomization
+Causal claim
 
-For each section, extract only:
+Structural rule
 
-- Definitions
-- Rules
-- Ratios
-- Constraints
-- Procedures
-- Instability triggers
-- Explicit warnings
+Conditional logic
 
-Discard:
+Incentive relationship
 
-- Narrative examples (unless structural)
-- Repetition
-- Persuasion
+Constraint mechanism
 
-Output: Raw ATOM List
+Kernel format:
 
----
+KERNEL:
+If X condition,
+Then Y mechanism,
+Because Z structural reason.
 
-## Stage 3 — Deduplicate & Normalize
+Kernel must:
 
-- Merge repeated concepts
-- Unify variable names
-- Remove semantic duplicates
-- Standardize formal expression format
+Remove adjectives.
 
-Output: Clean ATOM List
+Remove persuasion.
 
----
+Remove metaphor.
 
-## Stage 4 — Formalization
+Preserve logic.
 
-Every ATOM must be reducible to one of:
+Preserve falsifiability.
 
-- Equation
-- IF / THEN / BECAUSE
-- Boundary condition
-- Decision rule
-- Tradeoff statement
+Kernel is testable.
+Kernel must contain a break condition.
 
-If it cannot be formalized, downgrade priority.
+Break Condition Template:
+This kernel fails if:
 
-Output: Formal ATOM List
+A counterexample exists where X occurs but Y does not follow.
 
----
+Or if Z is demonstrably false.
 
-## Stage 5 — Adversarial Break Testing
+No kernel may be stored without break conditions.
 
-For each ATOM:
+3. PRIMITIVE (CANONICAL IRREDUCIBLE UNIT)
 
-- When does this fail?
-- What assumption collapses first?
-- What distortion invalidates it?
-- What adversary adaptation defeats it?
+Definition:
+A Primitive is the smallest structurally independent, falsifiable rule extracted from text.
 
-Add break conditions explicitly.
+A Primitive:
 
-Output: Break-Conditioned ATOM List
+Cannot be subdivided without loss of logic.
 
----
+Contains one structural mechanism only.
 
-## Stage 6 — Clustering + Dependency Graph
+Contains explicit conditions.
 
-Group ATOMs into CLUSTERS.
+Contains break conditions.
 
-Construct:
+Contains perceptual and formal separation.
 
-- Conceptual families
-- Dependency DAG
-- Prerequisite chains
+Primitive Schema (MANDATORY UNIFORM FORMAT):
 
-Output:
-- Cluster Map
-- Dependency Graph
+PRIMITIVE_ID:
+Source:
+Chapter:
+Signal Reference:
+Domain:
+Layer Tag:
 
----
+FORMAL_STATEMENT:
+(Strict logical statement of mechanism.)
 
-## Stage 7 — MVP Selection (Pareto Optimization)
+CONDITIONS:
+(List explicit required conditions.)
 
-Score each ATOM 0–5 on:
+MECHANISM:
+(Explain structural causation concisely.)
 
-1. Recurrence (frequency across book)
-2. Generativity (explains other ATOMs)
-3. Decision Impact
-4. Transferability
-5. Formalizability
-6. Break Clarity
+BREAK_CONDITIONS:
+(Explicit falsification scenarios.)
 
-Select highest scoring ATOMs with diversity constraint across clusters.
+FAILURE_MODES:
+(Common misapplications.)
 
-Output: MVP Set
+TRANSFER_CANDIDATES:
+(Potential cross-domain mappings.)
 
----
+CONFIDENCE_LEVEL:
+(Low / Medium / High, based on evidence strength.)
 
-## Stage 8 — Compression Layers
+Perceptual Section (Separate Block):
 
-Produce three tiers from same truth:
+PERCEPTUAL_SIGNATURE:
+(How it “feels” in live system observation.)
 
-1. Full ATOM Index
-2. MVP Sheet (one-liners + equations + breaks)
-3. Brain-Slam Page (single page, ultra-dense, no paragraphs)
+OBSERVABLE_INDICATORS:
+(Concrete measurable cues.)
 
-If new MVPs appear in final 15% of text, repeat scoring.
+WARNING_FLAGS:
+(Signs of misclassification.)
 
-Extraction is complete when MVP set stabilizes.
+Formal and perceptual blocks must remain separate.
 
----
+Never blend them.
 
-## Stage 9 — Drill Generation
+4. STRUCTURE MAP
 
-For each MVP:
+Definition:
+Graph of Primitives and their relationships.
 
-Generate:
+Structure Map identifies:
 
-- 30-second computation or classification drill
-- 2-minute scenario drill
-- Break-condition identification drill
-- Error pattern recognition drill
+Reinforcing primitives.
 
-Drills must be executable without external tools.
+Balancing primitives.
 
----
+Preconditions between primitives.
 
-## Stage 10 — Cross-Domain Transfer Map
+Dependency chains.
 
-For each MVP, map applicability to:
+Collapse triggers.
 
-- Markets (Flow / Pressure / Incentive / Power / Belief)
-- Governance / institutions
-- AI incentives
-- Social dynamics
-- Negotiation
-- Personal systems
+Structure Map Output Requirements:
 
-If non-transferable, mark explicitly.
+Directed connections.
 
-Transferability increases structural rank.
+Edge type classification (causal / amplifying / constraining).
 
----
+No narrative explanation.
 
-# V. OUTPUT CONTRACT
+Pure structural mapping.
 
-Each extraction run must produce:
+Structure Map must not invent primitives.
 
-1. ATOM_INDEX_[BOOK]_V001
-2. CLUSTERMAP_[BOOK]_V001
-3. MVPSET_[BOOK]_V001
-4. BRAINSLAM_[BOOK]_V001
-5. DRILLPACK_[BOOK]_V001
-6. TRANSFERMAP_[BOOK]_V001
+It may only use extracted primitives.
 
-No run is complete without all six artifacts.
+5. TRANSFER MAP
 
----
+Definition:
+Cross-domain applicability testing.
 
-# VI. MODES
+Each Primitive must undergo transfer interrogation.
 
-## FAST MODE
+Transfer Map Template:
 
-- Extract ATOMs
-- Build MVP Set
-- Generate Brain-Slam
-- Produce minimal Drill Pack
+ORIGINAL_DOMAIN:
+TARGET_DOMAIN:
+Structural Equivalent:
+Adjustment Required:
+Failure Risk:
 
-Skip deep dependency mapping.
+Transfer only allowed if:
 
----
+Mechanism remains intact.
 
-## FULL MODE
+Incentive gradients are analogous.
 
-- Full pipeline
-- Complete dependency DAG
-- Full transfer mapping
-- Adversarial stress-testing
+Constraints are comparable.
 
----
+Transfer must include new break conditions.
 
-# VII. QUALITY GATES
+No universalization allowed.
 
-1. No invented ATOMs.
-2. Every ATOM has source pointer.
-3. No summary paragraphs in final outputs.
-4. No rhetorical inflation.
-5. Every MVP must:
-   - Be formalizable
-   - Have break condition
-   - Be drillable
+V. UNIFORM DATA ENCODING STANDARD
 
-Failure to meet any gate invalidates extraction.
+All primitives must follow exact formatting.
 
----
+No stylistic variation allowed.
 
-# VIII. COMPLETION CRITERIA
+No synonym substitution for structural headers.
 
-Extraction is complete when:
+All caps for schema headers.
 
-- MVP Set stable
-- No new structural primitives emerge
-- Brain-Slam page fits one screen
-- Drill Pack executable daily
-- Transfer Map populated or marked non-transferable
+Colon after header.
 
----
+Single blank line separation between schema sections.
 
-# IX. PHILOSOPHICAL FOUNDATION
+This ensures:
 
-Dense books contain compression of experience.
+Machine readability.
 
-This machine performs second-order compression.
+Version tracking.
 
-Information → Structure  
-Structure → Mechanism  
-Mechanism → Constraint  
-Constraint → Reflex  
+Schema stability.
 
-Reading is passive.  
-Extraction is architectural.
+Tool compatibility.
 
----
+VI. SCIENTIFIC RIGOR REQUIREMENTS
+
+Every extraction must include:
+
+Explicit assumptions.
+
+Explicit break conditions.
+
+Explicit counterexample search.
+
+Probability estimate if empirical claim.
+
+Scope boundaries.
+
+No structural claim may be universal unless proven.
+
+All primitives are provisional.
+
+Revision protocol:
+
+If contradiction found:
+
+Log.
+
+Amend primitive.
+
+Version increment.
+
+Preserve old version in archive.
+
+No silent edits.
+
+VII. BREAK CONDITION DOCTRINE
+
+Break Conditions are not negative framing.
+
+Break Conditions define epistemic boundary.
+
+Break Conditions must include:
+
+Condition failure.
+
+Mechanism inversion.
+
+External override scenario.
+
+If Break Conditions are absent:
+
+Primitive is invalid.
+
+VIII. FAILURE MODES OF EXTRACTION
+
+Narrative Contamination:
+Injecting author's rhetoric into kernel.
+
+Overcompression:
+Merging multiple mechanisms into one primitive.
+
+Premature Synthesis:
+Building framework before primitive stability.
+
+Domain Drift:
+Assuming cross-domain validity without transfer mapping.
+
+Ego Inflation:
+Treating extraction as intellectual performance.
+
+Tool Contamination:
+Allowing formatting tools to alter schema structure.
+
+IX. VERSION CONTROL PROTOCOL
+
+Every extraction session must log:
+
+Date
+
+Source
+
+Chapter
+
+Primitive count
+
+Revisions made
+
+Break condition changes
+
+File naming standard:
+
+BOOKEXTRACT_[SOURCE]_PRIMITIVES_V###.md
+
+No spaces.
+No emojis.
+No decorative formatting.
+
+X. LAYERED SEPARATION DOCTRINE
+
+Formal Layer:
+
+Logic.
+
+Conditions.
+
+Mechanism.
+
+Falsifiability.
+
+Perceptual Layer:
+
+Lived pattern recognition.
+
+Observational cues.
+
+Felt signatures.
+
+These must never collapse into one block.
+
+Reason:
+
+Perception guides recognition.
+Formalism guards accuracy.
+
+Without separation:
+Extraction degrades into opinion.
+
+XI. SYNTHESIS ELIGIBILITY RULE
+
+Synthesis only allowed when:
+
+≥ 20 stable primitives.
+
+No unresolved break conflicts.
+
+Transfer mapping performed on ≥ 30% of primitives.
+
+At least 2 contradiction attempts documented.
+
+If not satisfied:
+Remain in extraction mode.
+
+XII. INTERFACE WITH SYSTEMS-SEER TRAINING
+
+This extraction machine aligns with:
+
+Structural clarity under uncertainty 
+
+SYSTEMSSEERMARKETMASTERSSOTV001
+
+Measurable progression metrics 
+
+SYSTEMSSEERMARKETMASTERYMETRICS…
+
+Modeling over reading doctrine 
+
+MAGNUMOPUSTRAININGBLUEPRINTV002…
+
+Book extraction is modeling.
+
+Not summarization.
+Not admiration.
+
+XIII. NORTH STAR
+
+Extract structure.
+Preserve falsifiability.
+Enable transfer.
+Prevent distortion.
+Remain calm inside complexity.
 
 © 2026 Alexander Pisko. All rights reserved.
